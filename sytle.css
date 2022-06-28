@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(0, 40, 172);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+
+
+}
+section{
+    color: rgba(0, 250, 0, 0.712);
+    border: 10 px solid rgb(49, 3, 92);
+    min-width: 100vh;
+} 
+    
