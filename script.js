@@ -5,7 +5,9 @@ const tarefas = []
 function add() {
     const input = document.querySelector("input")
     const tarefa = input.value
+    alert("Escreva uma tarefa")
     tarefas.push(tarefa)
+    console.log(tarefa)
     input.value = "" 
     render()
 }
@@ -20,6 +22,7 @@ function add() {
       ul.appendChild(li)
       const button=document.createElement("button")
       button.innerHTML= "X"
+      li.appendChild(apagar)
       button.addEventListener("click" ,function(){
         const index= tarefas.indexOf(tarefa)
         tarefas.splice(index, 1)
