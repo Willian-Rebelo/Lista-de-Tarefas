@@ -1,42 +1,27 @@
-// estado de aplicação
-const tarefas = []
+const input = document.querySelector("input")
+const ul = document.querySelector("ul")
+let array = []
 
-// alteradores de estado da aplicação 
 function add() {
-    const input = document.querySelector("input")
-    const tarefa = input.value
-    if(input.value==""){
-    alert("Escreva uma tarefa")}
-    tarefas.push(tarefa)
-    console.log(tarefa)
-    input.value = "" 
+    array.push(input.value)
+    input.value = ''
     render()
-}
-  // mostrar estado na tela 
-    function render() {
-    const ul = document.querySelector("ul")
+    console.log(array)
+};
+
+function render(){
     ul.innerHTML = null
-    
-    tarefas.forEach(function (tarefa) {
-      const li = document.createElement("li")
-      li.innerText = tarefa
-      ul.appendChild(li)
-      const button=document.createElement("button")
-      button.innerHTML= "X"
-      li.appendChild(apagar)
-      button.addEventListener("click" ,function(){
-        const index= tarefas.indexOf(tarefa)
-        tarefas.splice(index, 1)
-        render()
-      })
-
+    array.forEach(function(tarefa){
+        const li = document.createElement('li')
+        li.innerHTML = tarefa
+        ul.appendChild(li)
     })
-    li.appendChild (button)
-    }
-    // iniciar 
-    render()
+};
 
-
+function limpar () {
+    array = []
+    ul.innerHTML = null
+}
 
 
 
