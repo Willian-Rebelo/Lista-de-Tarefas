@@ -31,7 +31,7 @@ function add() {
       })
 
     })
-    
+    li.appendChild (button)
     }
     // iniciar 
     render()
