@@ -5,7 +5,8 @@ const tarefas = []
 function add() {
     const input = document.querySelector("input")
     const tarefa = input.value
-    alert("Escreva uma tarefa")
+    if(input.value==""){
+    alert("Escreva uma tarefa")}
     tarefas.push(tarefa)
     console.log(tarefa)
     input.value = "" 
@@ -28,7 +29,7 @@ function add() {
         tarefas.splice(index, 1)
         render()
       })
-      li.appendChild (button)
+
     })
     
     }
